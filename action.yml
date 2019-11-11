@@ -1,12 +1,24 @@
-name: 'Container Action Template'
-description: 'Get started with Container actions'
-author: 'GitHub'
-inputs: 
-  myInput:
-    description: 'Input to use'
-    default: 'world'
+name: 'Docs Builds'
+description: 'Builds docs and pushes them to a separate branch'
+author: 'Spectacles'
+inputs:
+  docsOutput:
+    description: Location of the generated docs files.
+    default: docs
+  branch:
+    description: Target branch to push docs to.
+    default: gh-pages
+  targetDirectory:
+    description: Directory in which to place docs files.
+    default: echo ${{ github.ref }} | cut -d / -f 3-
+  docsCommand:
+    description: Command that generates the docs files.
+    default: npm run docs
 runs:
   using: 'docker'
   image: 'Dockerfile'
   args:
-    - ${{ inputs.myInput }}
+    - ${{ inputs.docsOutput }}
+    - ${{ inputs.branch }}
+    - ${{ inputs.targetDirectory }}
+    - ${{ inputs.docsCommand }}
