@@ -1,4 +1,4 @@
-#!/bin/sh -l
+#!/bin/bash
 
 REPO="https://${GITHUB_ACTOR}:${{ secrets.GITHUB_TOKEN }}@github.com/${GITHUB_REPOSITORY}.git"
 DOCS_DIRECTORY=$1
