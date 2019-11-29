@@ -11,7 +11,7 @@
     "url": "git+https://github.com/spec-tacles/action-docs.git"
   },
   "author": "Will Nelson <will@wnelson.xyz>",
-  "license": "ISC",
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/spec-tacles/action-docs/issues"
   },
