@@ -1,11 +1,7 @@
 #!/bin/bash
 
-REPO="https://${GITHUB_ACTOR}:${{ secrets.GITHUB_TOKEN }}@github.com/${GITHUB_REPOSITORY}.git"
-DOCS_DIRECTORY=$1
-TARGET_BRANCH=$2
-TARGET_DIRECTORY=$($3)
-
-eval $4
+TARGET_DIRECTORY=$($TARGET_DIRECTORY)
+eval $DOCS_DIRECTORY
 
 git clone --no-checkout --single-branch -b $TARGET_BRANCH $REPO out
 

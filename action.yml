@@ -14,11 +14,9 @@ inputs:
   docsCommand:
     description: Command that generates the docs files.
     default: npm run docs
+  githubToken:
+    description: Your GitHub token to deploy docs with.
+    required: true
 runs:
-  using: 'docker'
-  image: 'Dockerfile'
-  args:
-    - ${{ inputs.docsOutput }}
-    - ${{ inputs.branch }}
-    - ${{ inputs.targetDirectory }}
-    - ${{ inputs.docsCommand }}
+  using: node12
+  main: index.js

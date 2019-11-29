@@ -1,0 +1,28 @@
+{
+  "name": "@spectacles/action-docs",
+  "version": "0.1.0",
+  "description": "A GitHub action that builds and deploys documentation.",
+  "main": "dist/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/spec-tacles/action-docs.git"
+  },
+  "author": "Will Nelson <will@wnelson.xyz>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/spec-tacles/action-docs/issues"
+  },
+  "homepage": "https://github.com/spec-tacles/action-docs#readme",
+  "dependencies": {
+    "@actions/core": "^1.2.0",
+    "@actions/exec": "^1.0.1",
+    "@actions/github": "^1.1.0",
+    "@actions/io": "^1.0.1"
+  },
+  "devDependencies": {
+    "typescript": "^3.7.2"
+  }
+}
