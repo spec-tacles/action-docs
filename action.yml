@@ -2,19 +2,19 @@ name: 'Docs Builds'
 description: 'Builds docs and pushes them to a separate branch'
 author: 'Spectacles'
 inputs:
-  docsOutput:
+  docs-output:
     description: Location of the generated docs files.
     default: docs
   branch:
     description: Target branch to push docs to.
     default: gh-pages
-  targetDirectory:
+  target-directory:
     description: Directory in which to place docs files.
     default: echo ${{ github.ref }} | cut -d / -f 3-
-  docsCommand:
+  docs-command:
     description: Command that generates the docs files.
     default: npm run docs
-  githubToken:
+  github-token:
     description: Your GitHub token to deploy docs with.
     required: true
 runs:
